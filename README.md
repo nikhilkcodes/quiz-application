@@ -8,6 +8,11 @@
 
 ## :star2: About the Project
 
+## 🌟 : Screenshots
+![Screenshot (152)](https://github.com/nikhilkcodes/quiz-application/assets/86142267/dc07c87e-4c77-4af7-8021-25af911dc746)
+
+![Screenshot (151)](https://github.com/nikhilkcodes/quiz-application/assets/86142267/171c39f2-7ef9-4456-b245-04f397baf35e)
+
 ## :toolbox: Getting Started
 
 ### :running: Run Locally
