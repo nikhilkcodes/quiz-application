@@ -1,0 +1,64 @@
+{
+	"questions": [
+	  {
+		"id": 1,
+		"question": "What is the event-driven programming model in Node.js called?",
+		"options": ["Callbacks", "Promises", "Async/Await", "Observables"],
+		"correctAnswer": "Callbacks"
+	  },
+	  {
+		"id": 2,
+		"question": "Which module in Node.js is used for handling file operations?",
+		"options": ["fs", "http", "path", "util"],
+		"correctAnswer": "fs"
+	  },
+	  {
+		"id": 3,
+		"question": "What does npm stand for?",
+		"options": ["Node Package Manager", "Node Programming Module", "New Project Maker", "Necessary Package Manager"],
+		"correctAnswer": "Node Package Manager"
+	  },
+	  {
+		"id": 4,
+		"question": "Which of the following is NOT a core module in Node.js?",
+		"options": ["http", "fs", "net", "express"],
+		"correctAnswer": "express"
+	  },
+	  {
+		"id": 5,
+		"question": "What is the purpose of the 'require' function in Node.js?",
+		"options": ["To include external modules", "To define routes", "To handle HTTP requests", "To create file streams"],
+		"correctAnswer": "To include external modules"
+	  },
+	  {
+		"id": 6,
+		"question": "What is the event loop in Node.js?",
+		"options": ["A mechanism for handling asynchronous operations", "A loop that executes JavaScript code", "A loop that handles HTTP requests", "A mechanism for handling file operations"],
+		"correctAnswer": "A mechanism for handling asynchronous operations"
+	  },
+	  {
+		"id": 7,
+		"question": "Which of the following is NOT true about Node.js?",
+		"options": ["It is a single-threaded runtime environment", "It is built on the Chrome V8 JavaScript engine", "It is only suitable for frontend development", "It is highly scalable and efficient"],
+		"correctAnswer": "It is only suitable for frontend development"
+	  },
+	  {
+		"id": 8,
+		"question": "What is the package.json file used for in Node.js projects?",
+		"options": ["To define project metadata and dependencies", "To store JavaScript code", "To define HTML templates", "To define routing rules"],
+		"correctAnswer": "To define project metadata and dependencies"
+	  },
+	  {
+		"id": 9,
+		"question": "Which of the following is an advantage of using Node.js?",
+		"options": ["Non-blocking I/O operations", "Heavy CPU computation", "Limited scalability", "Complex syntax"],
+		"correctAnswer": "Non-blocking I/O operations"
+	  },
+	  {
+		"id": 10,
+		"question": "What is a callback function in Node.js?",
+		"options": ["A function passed as an argument to another function", "A function that returns a promise", "A function that generates random numbers", "A function used for defining routes"],
+		"correctAnswer": "A function passed as an argument to another function"
+	  }
+	]
+  }

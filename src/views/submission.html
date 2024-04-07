@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Submission Result</title>
+    <style>
+        /* CSS styles */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1,h3 {
+            text-align: center;
+            color: #333;
+        }
+        #result-container {
+            margin-top: 20px;
+        }
+        .question {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Quiz Submission Result</h1>
+        <div id="result-container">
+            <p>Your score: <span id="score"></span></p>
+            <h2>Correct Answers:</h2>
+            <div id="correct-answers">
+                <!-- Correct answers will be displayed here dynamically -->
+            </div>
+        </div>
+        <h3>Made by Nikhil Singh</h3>
+    </div>
+    <script>
+        // Assuming the submission result is passed as query parameter
+        const urlParams = new URLSearchParams(window.location.search);
+        const score = urlParams.get('score');
+
+        // Get the score element
+        const scoreElement = document.getElementById('score');
+        scoreElement.textContent = score;
+
+        // Get the correct answers container element
+        const correctAnswersContainer = document.getElementById('correct-answers');
+
+        // Fetch quiz data to get questions and correct answers
+        fetch('http:localhost:3000/api/quiz') // Adjust the endpoint as per your server setup
+            .then(response => response.json())
+            .then(data => {
+                // Check if quiz data was retrieved successfully
+                if (data.success) {
+                    const quizQuestions = data.questions;
+
+                    // Iterate over each question and display correct answer
+                    quizQuestions.forEach(question => {
+                        const questionDiv = document.createElement('div');
+                        questionDiv.classList.add('question');
+                        questionDiv.innerHTML = `<strong>${question.question}</strong><br>Correct Answer: ${question.correctAnswer}`;
+                        correctAnswersContainer.appendChild(questionDiv);
+                    });
+                } else {
+                    console.error('Failed to fetch quiz data:', data.error);
+                }
+            })
+            .catch(error => console.error('Error fetching quiz data:', error));
+    </script>
+</body>
+</html>
